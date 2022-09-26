@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  subcontractors.api:
+    image: ${DOCKER_REGISTRY-}subcontractorsapi
+    container_name: Subcontractors.API
+    build:
+      context: .
+      dockerfile: SubContractors.API/Dockerfile
+    environment:
+      - ACCEPT_EULA=Y
+      - ASPNETCORE_ENVIRONMENT=Local
+
+
+  redis.stack.server:
+    image: redis/redis-stack-server:latest
+    container_name: Subcontractors.RedisCache
+    ports:
+      - "6379:6379"
+
+
+  mssql.server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: Subcontractors.SQLServer
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=11-qq-AA
+
+
+  seq:
+    image: datalust/seq
+    container_name: Subcontractors.Seq
+    ports:
+      - "80:80"
+      - "5341:5341"
+    environment:
+      - ACCEPT_EULA=Y
+
+
+  rabbitMq:
+    image: rabbitmq:3-management
+    container_name: Subcontractors.RabbitMq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=sub123

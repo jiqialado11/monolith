@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Handlers\Budget\Commands\**" />
+    <Compile Remove="Handlers\Budget\EventHandlers\**" />
+    <Compile Remove="Handlers\Common\Commands\**" />
+    <Compile Remove="Handlers\Common\EventHandlers\**" />
+    <Compile Remove="Handlers\LegalEntity\EventHandlers\**" />
+    <Compile Remove="Handlers\Project\EventHandlers\**" />
+    <Compile Remove="Handlers\Staff\Commands\**" />
+    <Compile Remove="Handlers\Staff\EventHandlers\**" />
+    <Compile Remove="Handlers\SubContractors\EventHandlers\**" />
+    <EmbeddedResource Remove="Handlers\Budget\Commands\**" />
+    <EmbeddedResource Remove="Handlers\Budget\EventHandlers\**" />
+    <EmbeddedResource Remove="Handlers\Common\Commands\**" />
+    <EmbeddedResource Remove="Handlers\Common\EventHandlers\**" />
+    <EmbeddedResource Remove="Handlers\LegalEntity\EventHandlers\**" />
+    <EmbeddedResource Remove="Handlers\Project\EventHandlers\**" />
+    <EmbeddedResource Remove="Handlers\Staff\Commands\**" />
+    <EmbeddedResource Remove="Handlers\Staff\EventHandlers\**" />
+    <EmbeddedResource Remove="Handlers\SubContractors\EventHandlers\**" />
+    <None Remove="Handlers\Budget\Commands\**" />
+    <None Remove="Handlers\Budget\EventHandlers\**" />
+    <None Remove="Handlers\Common\Commands\**" />
+    <None Remove="Handlers\Common\EventHandlers\**" />
+    <None Remove="Handlers\LegalEntity\EventHandlers\**" />
+    <None Remove="Handlers\Project\EventHandlers\**" />
+    <None Remove="Handlers\Staff\Commands\**" />
+    <None Remove="Handlers\Staff\EventHandlers\**" />
+    <None Remove="Handlers\SubContractors\EventHandlers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Handlers\Staff\Commands\AssignProject\AssignProject.cs" />
+    <Compile Include="Handlers\Staff\Commands\AssignProject\AssignProjectHandler.cs" />
+    <Compile Include="Handlers\Staff\Commands\AddStaff\AddStaff.cs" />
+    <Compile Include="Handlers\Staff\Commands\AddStaff\AddStaffHandler.cs" />
+    <Compile Include="Handlers\Staff\Commands\CreateStaff\CreateStaff.cs" />
+    <Compile Include="Handlers\Staff\Commands\CreateStaff\CreateStaffHandler.cs" />
+    <Compile Include="Handlers\Staff\Commands\DeleteStaff\DeleteStaff.cs" />
+    <Compile Include="Handlers\Staff\Commands\DeleteStaff\DeleteStaffHandler.cs" />
+    <Compile Include="Handlers\Staff\Commands\RetrieveAndCreateStaff\RetrieveAndCreateStaff.cs" />
+    <Compile Include="Handlers\Staff\Commands\RetrieveAndCreateStaff\RetrieveAndCreateStaffHandler.cs" />
+    <Compile Include="Handlers\Staff\Commands\UpdateStaff\UpdateStaff.cs" />
+    <Compile Include="Handlers\Staff\Commands\UpdateStaff\UpdateStaffHandler.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\SubContractors.Infrastructure\SubContractors.Infrastructure.csproj" />
+    <ProjectReference Include="..\SubContractors.Messages\SubContractors.Messages.csproj" />
+  </ItemGroup>
+
+</Project>

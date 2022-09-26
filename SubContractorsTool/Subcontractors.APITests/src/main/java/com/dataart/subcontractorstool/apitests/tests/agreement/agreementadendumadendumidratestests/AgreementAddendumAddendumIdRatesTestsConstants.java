@@ -1,0 +1,4 @@
+package com.dataart.subcontractorstool.apitests.tests.agreement.agreementadendumadendumidratestests;
+
+public class AgreementAddendumAddendumIdRatesTestsConstants {
+}
